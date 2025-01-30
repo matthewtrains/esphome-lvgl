@@ -137,11 +137,11 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: printer_power_icon
-                  text: $printer
+                  text: $3D-printer
               - label:
                   align: bottom_left
                   id: printer_power_label
-                  text: "Printer"
+                  text: "3D-Printer"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
