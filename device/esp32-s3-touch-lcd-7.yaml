@@ -16,8 +16,9 @@ esp32:
 
 # Esphome
 esphome:
-  name: matthews_buttons
-  friendly_name: matthews
+  name: ${name}
+  friendly_name: ${friendly_name}
+  area: ${room}
   platformio_options:
     build_unflags: -Werror=all
     board_build.flash_mode: dio
