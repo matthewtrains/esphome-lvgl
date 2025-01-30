@@ -137,7 +137,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: printer_power_icon
-                  text: $3D-printer
+                  text: $printer
               - label:
                   align: bottom_left
                   id: printer_power_label
