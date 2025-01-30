@@ -6,8 +6,8 @@ substitutions:
 
 # Wifi Setup
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+  ssid: SekeraksIOT
+  password: AnnSack2015*
 
 # Packages
 packages:
