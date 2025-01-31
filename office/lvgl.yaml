@@ -166,7 +166,7 @@ lvgl:
                   text: "Lighting"
             on_click:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: light.toggle
                   data:
                     entity_id: light.wiz_rgbww_tunable_b635b5
                     
