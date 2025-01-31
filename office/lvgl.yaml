@@ -168,7 +168,7 @@ lvgl:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.office_3d_printer_lights
+                    entity_id: light.wiz_rgbww_tunable_b635b5
                     
         # Mac Pro Server
         - button: 
