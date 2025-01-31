@@ -134,8 +134,13 @@ lvgl:
     styles: control
     checked_state: 
       entity_id: switch.sonoff_100205a433_1
-      state: "on"  # Button stays checked when entity is "on"
-    subscribe_entity: switch.sonoff_100205a433_1  # Ensures real-time updates
+      state: "on"  
+    subscribe_entity: 
+      entity_id: switch.sonoff_100205a433_1
+    bindings:
+      - id: printer_power_button
+        entity_id: switch.sonoff_100205a433_1
+        property: checked
     widgets:
       - label:
           text_font: $icon_font
@@ -151,6 +156,7 @@ lvgl:
           service: switch.toggle
           data:
             entity_id: switch.sonoff_100205a433_1
+
 
         # 3d Printer Lights
         - button: 
