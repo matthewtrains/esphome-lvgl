@@ -127,26 +127,30 @@ lvgl:
                     entity_id: light.office_storage
 
         # 3d Printer
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: printer_power_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: printer_power_icon
-                  text: $printer
-              - label:
-                  align: bottom_left
-                  id: printer_power_label
-                  text: "3D-Printer-testg"
-            on_click:
-              - homeassistant.service:
-                  service: switch.toggle
-                  data:
-                    entity_id: switch.sonoff_100205a433_1
+- button: 
+    height: $button_height_single
+    checkable: true
+    id: printer_power_button
+    styles: control
+    checked_state: 
+      entity_id: switch.sonoff_100205a433_1
+      state: "on"  # Button stays checked when entity is "on"
+    subscribe_entity: switch.sonoff_100205a433_1  # Ensures real-time updates
+    widgets:
+      - label:
+          text_font: $icon_font
+          align: top_left
+          id: printer_power_icon
+          text: $printer
+      - label:
+          align: bottom_left
+          id: printer_power_label
+          text: "3D-Printer-testg"
+    on_click:
+      - homeassistant.service:
+          service: switch.toggle
+          data:
+            entity_id: switch.sonoff_100205a433_1
 
         # 3d Printer Lights
         - button: 
