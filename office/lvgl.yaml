@@ -146,7 +146,7 @@ lvgl:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.office_3d_printer_power
+                    entity_id: switch.sonoff_100205a433_1
 
         # 3d Printer Lights
         - button: 
