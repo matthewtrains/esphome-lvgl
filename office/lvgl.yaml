@@ -141,7 +141,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: printer_power_label
-                  text: "3D-Printer"
+                  text: "3D-Printer-testg"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
