@@ -32,7 +32,7 @@ ota:
   platform: esphome
 
 # Enable Home Assistant API
-api:
+api: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4YTkzY2NkMTI2ZmY0MGFjOGMzMTZhODgxNzc4YzBiNSIsImlhdCI6MTczODI4MTcxNCwiZXhwIjoyMDUzNjQxNzE0fQ.QWDbtki-xqx9BCRE4heCHXuiZ6-jDblTlbSVg1veyWA
 
 # Enable logging
 logger:
