@@ -134,13 +134,8 @@ lvgl:
     styles: control
     checked_state: 
       entity_id: switch.sonoff_100205a433_1
-      state: "on"  
-    subscribe_entity: 
-      entity_id: switch.sonoff_100205a433_1
-    bindings:
-      - id: printer_power_button
-        entity_id: switch.sonoff_100205a433_1
-        property: checked
+      state: "on"
+    subscribe_entity: switch.sonoff_100205a433_1
     widgets:
       - label:
           text_font: $icon_font
@@ -151,11 +146,16 @@ lvgl:
           align: bottom_left
           id: printer_power_label
           text: "3D-Printer-testg"
+      - state:  # Add this to ensure state updates are visible
+          entity_id: switch.sonoff_100205a433_1
+          property: checked
+          id: printer_power_state
     on_click:
       - homeassistant.service:
           service: switch.toggle
           data:
             entity_id: switch.sonoff_100205a433_1
+
 
 
         # 3d Printer Lights
